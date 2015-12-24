@@ -1,4 +1,4 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/* normalize.css v3.0.2 | MIT License | git.io/normalize */
 img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}
 
 html {
@@ -46,8 +46,8 @@ header {
   background: url("../images/logo-text-white.svg") no-repeat;
   background-size: contain;
   height: 35px;
-  width: 280px;
   margin: 10px auto;
+  width: 280px;
 }
 
 @media only screen and (min-width: 641px) {
@@ -58,7 +58,7 @@ header {
     margin: 20px 0 20px 20px;
   }
   header .vi-logo-text {
-    margin: 25px 20px 15px 20px;
+    margin: 25px 20px 15px;
   }
 }
 
@@ -66,14 +66,14 @@ header {
   background: no-repeat 50% 50%;
   background-size: cover;
   height: auto;
-  min-height: 320px;
   max-height: calc(70vh - 85px);
+  min-height: 320px;
   position: relative;
 }
 .vi-hero::before {
   content: "";
-  height: 0;
   display: block;
+  height: 0;
   padding-bottom: 48%;
 }
 
@@ -84,7 +84,7 @@ header {
 
 .vi-hero-tagline-wrapper {
   background: #000000;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.6) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,.3) 0%,rgba(0,0,0,.6) 100%);
   bottom: 0;
   color: #fff;
   position: absolute;
@@ -132,12 +132,12 @@ footer .vi-hero-tagline-wrapper {
   }
 }
 .vi-contact .vi-icon {
-  background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
   background-size: contain;
   height: 30px;
   margin-right: 10px;
-  opacity: 0.5;
+  opacity: .5;
   width: 30px;
 }
 .vi-contact-item {
@@ -145,8 +145,8 @@ footer .vi-hero-tagline-wrapper {
   align-items: center;
   color: #424242;
   display: flex;
-  padding: 15px 10px;
   font-size: 16px;
+  padding: 15px 10px;
 }
 .vi-contact-item:hover,
 .vi-contact-item:focus {
@@ -168,7 +168,7 @@ footer .vi-hero-tagline-wrapper {
 @media only screen and (max-width: 641px) {
   .vi-contact {
     left: calc(50% - 320px/2);
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
     width: 320px;
   }
 }
@@ -185,13 +185,13 @@ footer .vi-hero-tagline-wrapper {
  * position is used to make this box a containing block (it becomes a reference for its absolutely positioned children). overflow will hide part of the images moving outside of the box.
  */
 
-#slideshow {
-  background: #B07842;
+.vi-slideshow {
+  background: #b07842;
   height: auto;
   max-height: 500px;
   overflow: hidden;
-  position: relative;
   padding-bottom: 50%;
+  position: relative;
 }
 
 /**
@@ -201,58 +201,32 @@ footer .vi-hero-tagline-wrapper {
  * Because the images are now larger than their parent container, we use top, left and margin values to align them in the center of the box.
  * Finally, we set the transition (property and duration). Note that duration values are different for opacity and transform as we want the "fade-in" effect to be faster than the "panning" effect.
  */
-
-#slideshow img {
-  position: absolute;
-  width: 100%;
+.vi-slideshow img {
   height: auto;
-  opacity:0;
-  -webkit-transition-property: opacity, -webkit-transform;
-  -webkit-transition-duration: 3s, 10s;
-     -moz-transition-property: opacity, -moz-transform;
-     -moz-transition-duration: 3s, 10s;
-      -ms-transition-property: opacity, -ms-transform;
-      -ms-transition-duration: 3s, 10s;
-       -o-transition-property: opacity, -o-transform;
-       -o-transition-duration: 3s, 10s;
-          transition-property: opacity, transform;
-          transition-duration: 3s, 10s;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 3s, transform 10s;
+  width: 100%;
 }
 
 /**
  * We change the point of origin using four corners so images do not move in the same direction.
  * This technique allows us to create various paths while applying the same translate() values to all images (see the 'fx' class further below).
  */
-
-#slideshow img  {
-    -webkit-transform-origin: bottom left;
-       -moz-transform-origin: bottom left;
-        -ms-transform-origin: bottom left;
-         -o-transform-origin: bottom left;
-            transform-origin: bottom left;
+.vi-slideshow img  {
+  transform-origin: bottom left;
 }
 
-#slideshow :nth-child(2n+1) {
-    -webkit-transform-origin: top right;
-       -moz-transform-origin: top right;
-        -ms-transform-origin: top right;
-         -o-transform-origin: top right;
-            transform-origin: top right;
+.vi-slideshow :nth-child(2n+1) {
+  transform-origin: top right;
 }
 
-#slideshow :nth-child(3n+1) {
-    -webkit-transform-origin: top left;
-       -moz-transform-origin: top left;
-        -ms-transform-origin: top left;
-         -o-transform-origin: top left;
-            transform-origin: top left;
+.vi-slideshow :nth-child(3n+1) {
+  transform-origin: top left;
 }
-#slideshow :nth-child(4n+1) {
-  -webkit-transform-origin: bottom right;
-     -moz-transform-origin: bottom right;
-      -ms-transform-origin: bottom right;
-       -o-transform-origin: bottom right;
-          transform-origin: bottom right;
+
+.vi-slideshow :nth-child(4n+1) {
+  transform-origin: bottom right;
 }
 
 /**
@@ -261,18 +235,14 @@ footer .vi-hero-tagline-wrapper {
  * This is because the second image needs to show on top of the first one when it transitions in.
  */
 
-#slideshow .fx:first-child + img ~ img  {
-    z-index: -1;
+.vi-slideshow .fx:first-child + img ~ img  {
+  z-index: -1;
 }
 
 /**
  * Because images are styled with a different point of origin, the following rule will create different panning effects.
  */
-#slideshow .fx {
-    opacity: 1;
-    -webkit-transform: scale(1.1);
-       -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-         -o-transform: scale(1.1);
-            transform: scale(1.1);
+.vi-slideshow .fx {
+  opacity: 1;
+  transform: scale(1.1);
 }

@@ -1,0 +1,22 @@
+exclude:
+  - 'node_modules/**'
+  - 'dist/**'
+  - 'src/css/**'
+
+linters:
+  IdSelector:
+    exclude: 'src/css/cs/items/_mainheader.scss'
+  ImportantRule:
+    enabled: false
+  NameFormat:
+    allow_leading_underscore: false
+  NestingDepth:
+    max_depth: 7
+  SelectorDepth:
+    enabled: false
+  StringQuotes:
+    enabled: false
+  QualifyingElement:
+    enabled: false
+  UrlFormat:
+    enabled: false
