@@ -98,7 +98,7 @@ header {
 
 @media only screen and (min-width: 641px) {
   .vi-hero-header {
-    background-image: url('../images/hero-1300.jpg');
+    background-image: url('../images/hero-960.jpg');
   }
   .vi-hero-tagline {
     text-align: right;
@@ -167,9 +167,9 @@ footer .vi-hero-tagline-wrapper {
 }
 @media only screen and (max-width: 641px) {
   .vi-contact {
-    left: calc(50% - 320px/2);
+    left: calc(50% - 330px/2);
     margin: 0 0 20px;
-    width: 320px;
+    width: 330px;
   }
 }
 

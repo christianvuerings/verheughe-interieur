@@ -8,7 +8,3 @@ Github version: http://christianvuerings.github.io/verheughe-interieur/
 
 * No JS libraries
 * Normalize.css
-
-# TODO
-
-* Add Google Analytics support
